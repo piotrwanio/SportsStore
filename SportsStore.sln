@@ -3,11 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.WebUI", "SportStore.Domain\SportsStore.WebUI.csproj", "{6CC7D810-B983-4116-B804-8AA9E3B5A5BC}"
-	ProjectSection(ProjectDependencies) = postProject
-		{A5C7E2E9-6D26-44F1-9796-507B7B2B913A} = {A5C7E2E9-6D26-44F1-9796-507B7B2B913A}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.Domain", "SportsStore.Domain\SportsStore.Domain.csproj", "{A5C7E2E9-6D26-44F1-9796-507B7B2B913A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.UnitTests", "SportsStore.UnitTests\SportsStore.UnitTests.csproj", "{16D7875A-4DB1-4D97-9066-732F5D291602}"
@@ -16,16 +11,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.UnitTests", "Sp
 		{A5C7E2E9-6D26-44F1-9796-507B7B2B913A} = {A5C7E2E9-6D26-44F1-9796-507B7B2B913A}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.WebUI", "SportsStore.WebUI\SportsStore.WebUI.csproj", "{6CC7D810-B983-4116-B804-8AA9E3B5A5BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6CC7D810-B983-4116-B804-8AA9E3B5A5BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6CC7D810-B983-4116-B804-8AA9E3B5A5BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6CC7D810-B983-4116-B804-8AA9E3B5A5BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6CC7D810-B983-4116-B804-8AA9E3B5A5BC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A5C7E2E9-6D26-44F1-9796-507B7B2B913A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A5C7E2E9-6D26-44F1-9796-507B7B2B913A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5C7E2E9-6D26-44F1-9796-507B7B2B913A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -34,6 +27,10 @@ Global
 		{16D7875A-4DB1-4D97-9066-732F5D291602}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16D7875A-4DB1-4D97-9066-732F5D291602}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16D7875A-4DB1-4D97-9066-732F5D291602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CC7D810-B983-4116-B804-8AA9E3B5A5BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CC7D810-B983-4116-B804-8AA9E3B5A5BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CC7D810-B983-4116-B804-8AA9E3B5A5BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CC7D810-B983-4116-B804-8AA9E3B5A5BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
