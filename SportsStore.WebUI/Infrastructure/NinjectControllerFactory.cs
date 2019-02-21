@@ -8,8 +8,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using SportsStore.Domain.Concrete;
 
-namespace SportStore.Domain.Infrastructure
+namespace SportsStore.WebUI.Infrastructure
 {
     public class NinjectControllerFactory : DefaultControllerFactory
     {
@@ -23,15 +24,7 @@ namespace SportStore.Domain.Infrastructure
 
         private void AddBindings()
         {
-            Mock<IProductRepository> mock = new Mock<IProductRepository>();
-            mock.Setup(m => m.Products).Returns(new List<Product>
-            {
-                new Product {Name = "Piłka nożna", Price = 25},
-                new Product {Name = "Deska snowboardowa", Price = 2222, },
-                new Product {Name = "Buty do biegania", Price = 22}
-            }.AsQueryable());
-
-            ninjectKernel.Bind<IProductRepository>().ToConstant(mock.Object);
+            ninjectKernel.Bind<IProductRepository>().To<EFProductRepository>();
         }
 
         protected override IController GetControllerInstance(RequestContext requestContext, Type controllerType)

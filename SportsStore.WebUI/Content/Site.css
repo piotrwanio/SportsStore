@@ -1,12 +1,63 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#categories {
+    width: 20%;
+    padding: .3em;
 }
 
 /* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.container.body-content {
+    width: 80%;
+    border-left: 2px solid gray;
+    padding: 1em;
+}
+
+
+.item {
+    border-top: 1px dotted gray;
+}
+
+.item:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.item h3 {
+    font-size: 1.3em;
+    margin: 0 0 .25em 0;
+}
+
+.item h4 {
+    font-size: 1.1em;
+    margin: .4em 0 0 0;
+}
+
+.pager {
+    text-align: right;
+    border-top: 2px solid silver;
+    padding: .5em 0 0 0;
+    margin-top: 1em;
+}
+
+.pager a {
+    font-size: 1.1em;
+    color: #666;
+    text-decoration: none;
+    padding: 0 .4em 0 .4em;
+}
+
+.pager a:hover {
+    background-color: silver;
+}
+
+.pager a.selected {
+    background-color: #353535;
+    color: white;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
