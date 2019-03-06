@@ -5,9 +5,49 @@
     flex-wrap: wrap;
 }
 
+form {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin-top: 0.3em;
+}
+
+tfoot td{
+    border-top: 1px dotted gray;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+}
+
 #categories {
     width: 20%;
     padding: .3em;
+}
+
+#categories a {
+    font: bold 1.1em "Arial Narrow", "Franklin Gothic Medium", Arial;
+    display: block;
+    text-decoration: none;
+    padding: .6em;
+    color: black;
+    border-bottom: 1px solid silver;
+}
+
+#categories a.selected {
+    background-color: #666;
+    color: white;
+}
+
+#categories a:hover{
+    background-color: #ccc;
+}
+
+#categories a.selected:hover{
+    background-color: #666;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -37,6 +77,17 @@
     margin: .4em 0 0 0;
 }
 
+.item form {
+    float: right;
+}
+
+.item input {
+    color: white;
+    background-color: #333;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
 .pager {
     text-align: right;
     border-top: 2px solid silver;
@@ -60,10 +111,58 @@
     color: white;
 }
 
+.actionButtons a, input.actionButtons {
+    font: .8em Arial;
+    color: white;
+    margin: .5em;
+    text-decoration: none;
+    padding: .15em 1.5em .2em 1.5em;
+    background-color: #353535;
+    border: 1px solid black;
+}
+
+#cart {
+    font-size: 0.8em;
+    float: right;
+    margin: .8em;
+    color: silver;
+    background-color: #555;
+    padding: .5em .5em .5em 1em;
+}
+
+#cart a{
+    text-decoration: none;
+    padding: .4em 1em .4em 1em;
+    line-height: 2.1em;
+    margin-left: .5em;
+    background-color: #333;
+    color: white;
+    border: 1px solid black;
+}
+
+.nav.navbar-nav{
+    float:right;
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
     max-width: 280px;
+}
+
+@media(max-width: 600px) {
+    body {
+        display: block;
+    }
+
+    .container.body-content{
+        width: 100%;
+        border-left: none;
+    }
+
+    #categories{
+        width: 100%;
+    }
 }
 

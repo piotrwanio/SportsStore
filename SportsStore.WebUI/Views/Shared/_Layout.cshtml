@@ -21,13 +21,14 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    @{ Html.RenderAction("Summary", "Cart");}
                 </ul>
             </div>
         </div>
     </div>
 
     <div id="categories">
-        Tu będą kategorie
+        @{ Html.RenderAction("Menu", "Nav"); }
     </div>
 
     <div class="container body-content">
