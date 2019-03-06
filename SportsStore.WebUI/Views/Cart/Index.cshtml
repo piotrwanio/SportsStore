@@ -1,4 +1,4 @@
-﻿@model SportStore.Domain.Models.CartIndexViewModel
+﻿@model SportsStore.WebUI.Models.CartIndexViewModel
 
 @{
     ViewBag.Title = "Sklep sportowy: Twój koszyk";
@@ -21,6 +21,14 @@
             <td align="left">@line.Product.Name</td>
             <td align="left">@line.Product.Price.ToString("c")</td>
             <td align="left">@((line.Product.Price*line.Quantity).ToString("c"))</td>
+            <td>
+                @using(Html.BeginForm("RemoveFromCart", "Cart"))
+                {
+                    @Html.Hidden("ProductId", line.Product.ProductID)
+                    @Html.HiddenFor(x => x.ReturnUrl)
+                    <input class="actionButtons" type="submit" value="Usuń"/>
+                }
+            </td>
         </tr>
         }
     </tbody>
@@ -34,4 +42,5 @@
 </table>
 <p align="center" class="actionButtons">
     <a href="@Model.ReturnUrl">Kontynuuj zakupy</a>
+    @Html.ActionLink("Zamowienie", "Checkout")
 </p>

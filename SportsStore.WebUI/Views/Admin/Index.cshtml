@@ -1,0 +1,63 @@
+﻿@model IEnumerable<SportsStore.Domain.Entities.Product>
+
+@{
+    ViewBag.Title = "Administracja: Wszystkie produkty";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Wszystkie produkty</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            Akcje
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @item.ProductID
+        </td>
+        <td>
+            @Html.ActionLink(item.Name, "Edit", new { item.ProductID }) |
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @item.Price.ToString("c")
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductID })
+            @using (Html.BeginForm("Delete", "Admin"))
+            {
+                @Html.Hidden("ProductID", item.ProductID)
+                <input type="submit" value="Usuń"/>
+            }
+        </td>
+    </tr>
+}
+
+</table>

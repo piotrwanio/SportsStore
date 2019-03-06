@@ -121,10 +121,48 @@ table {
     border: 1px solid black;
 }
 
+#cart {
+    font-size: 0.8em;
+    float: right;
+    margin: .8em;
+    color: silver;
+    background-color: #555;
+    padding: .5em .5em .5em 1em;
+}
+
+#cart a{
+    text-decoration: none;
+    padding: .4em 1em .4em 1em;
+    line-height: 2.1em;
+    margin-left: .5em;
+    background-color: #333;
+    color: white;
+    border: 1px solid black;
+}
+
+.nav.navbar-nav{
+    float:right;
+}
+
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
     max-width: 280px;
+}
+
+@media(max-width: 600px) {
+    body {
+        display: block;
+    }
+
+    .container.body-content{
+        width: 100%;
+        border-left: none;
+    }
+
+    #categories{
+        width: 100%;
+    }
 }
 
