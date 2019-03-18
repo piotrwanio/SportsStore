@@ -88,7 +88,7 @@ namespace SportsStore.UnitTests
             Product product = new Product { Name = "Test" };
 
             //working - trying to save product
-            ActionResult result = target.Edit(product);
+            ActionResult result = target.Edit(product, null);
 
             //asserts - check if there was called repository
             mock.Verify(m => m.SaveProduct(product));
@@ -109,7 +109,7 @@ namespace SportsStore.UnitTests
             target.ModelState.AddModelError("error", "error");
 
             //working - trying to save product
-            ActionResult result = target.Edit(product);
+            ActionResult result = target.Edit(product, null);
 
             //asserts - check if there was called repository
             mock.Verify(m => m.SaveProduct(It.IsAny<Product>()), Times.Never());
@@ -141,5 +141,7 @@ namespace SportsStore.UnitTests
             //has been called with correct product
             mock.Verify(m => m.DeleteProduct(product.ProductID));
         }
+
+ 
     }
 }
